@@ -32,7 +32,7 @@ const MainTextbox = styled(FlexWrapper)`
   align-items: left;
 `;
 
-const MainTitle = styled.h3`
+const MainTitle = styled.h2`
   color: white;
 `;
 
