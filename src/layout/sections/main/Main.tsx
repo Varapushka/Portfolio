@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import photo from '../../../assets/img/avatar.webp';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { StyledButton } from '../../../components/Button';
 
 export const Main = () => {
   return (
@@ -38,16 +39,6 @@ const MainTitle = styled.h2`
 
 const MainDescription = styled.p`
   color: white;
-`;
-
-const StyledButton = styled.button`
-  width: 280px;
-  height: 80px;
-  border: none;
-  background-color: rgba(19, 173, 199, 1);
-  border-radius: 50px;
-  color: white;
-  font-size: 1.5rem;
 `;
 
 const Photo = styled.img`

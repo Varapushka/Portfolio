@@ -1,11 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../FlexWrapper';
+import { StyledButton } from '../Button';
+
+
 
 type ProjCardPropsType = {
   src: string;
   title: string;
   text: string;
+  link: string;
 };
 
 export const ProjCard = (props: ProjCardPropsType) => {
@@ -16,6 +20,11 @@ export const ProjCard = (props: ProjCardPropsType) => {
         <Title>{props.title}</Title>
         <Text>{props.text}</Text>
       </FlexWrapper>
+      <a href={props.link}>
+        <StyledButton width='200px' height='60px'>Look it up</StyledButton>
+      </a>
+      {/* вместо кнопки динамическая ссылка кнопкой */}
+
     </StyledCard>
   );
 };
@@ -42,3 +51,4 @@ const Title = styled.h3`
 const Text = styled.p`
   color: white;
 `;
+

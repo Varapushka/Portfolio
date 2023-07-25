@@ -6,15 +6,15 @@ export const Nav = () => {
     <StyledNav>
       <ul>
         <li>
-          <a href="">Projects</a>
+          <NavLink href="">Projects</NavLink>
         </li>
 
         <li>
-          <a href="">Technologies</a>
+          <NavLink href="">Technologies</NavLink>
         </li>
 
         <li>
-          <a href="">About me</a>
+          <NavLink href="">About me</NavLink>
         </li>
       </ul>
     </StyledNav>
@@ -26,5 +26,12 @@ const StyledNav = styled.nav`
   ul {
     display: flex;
     gap:20px;
+ list-style-type: none;
   }
+`
+
+const NavLink = styled.a`
+  text-decoration: none;
+  color: white;
+  
 `

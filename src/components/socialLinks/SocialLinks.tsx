@@ -12,7 +12,7 @@ export const SocialLinks = () => {
         <Icon iconId={'linkedinSvg'} width="32px" height="32px" />
       </a>
       <a href="">
-        <Icon iconId={'figmaSvg'} width="20px" height="32px" />
+        <Icon iconId={'figmaSvg'} width="20px" height="40px" />
       </a>
     </StyledSocialBox>
   );

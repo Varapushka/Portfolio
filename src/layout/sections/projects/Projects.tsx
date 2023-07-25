@@ -8,10 +8,10 @@ import styled from 'styled-components';
     return <StyledProjects>
       <StyledH2>Projects</StyledH2>
       <CardBox>
-        <ProjCard src={projPhoto} title="Project 1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-        <ProjCard src={projPhoto} title="Project 2" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-        <ProjCard src={projPhoto} title="Project 3" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-        <ProjCard src={projPhoto} title="Project 4" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+        <ProjCard src={projPhoto} title="Project 1" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." link="#"/>
+        <ProjCard src={projPhoto} title="Project 2" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." link="#"/>
+        <ProjCard src={projPhoto} title="Project 3" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." link="#"/>
+        <ProjCard src={projPhoto} title="Project 4" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." link="#"/>
       </CardBox>
     </StyledProjects>
 }
