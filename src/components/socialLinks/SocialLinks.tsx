@@ -5,14 +5,14 @@ import styled from 'styled-components';
 export const SocialLinks = () => {
   return (
     <StyledSocialBox>
-      <a href="">
-        <Icon iconId={'githubSvg'} width="32px" height="32px" />
+      <a href="#">
+        <Icon iconId={'githubSvg'} width="32px" height="32px" viewBox='0 0 32 32'/>
       </a>
-      <a href="">
-        <Icon iconId={'linkedinSvg'} width="32px" height="32px" />
+      <a href="#">
+        <Icon iconId={'linkedinSvg'} width="32px" height="32px" viewBox='0 0 32 32'/>
       </a>
-      <a href="">
-        <Icon iconId={'figmaSvg'} width="20px" height="40px" />
+      <a href="#">
+        <Icon iconId={'instagramSvg'} width="32px" height="32px" viewBox='0 0 23 23'/>
       </a>
     </StyledSocialBox>
   );

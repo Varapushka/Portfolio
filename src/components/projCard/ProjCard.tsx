@@ -45,10 +45,8 @@ const ProjImg = styled.img`
 `;
 
 const Title = styled.h3`
-  color: white;
 `;
 
 const Text = styled.p`
-  color: white;
 `;
 

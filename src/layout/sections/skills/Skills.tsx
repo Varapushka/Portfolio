@@ -13,7 +13,7 @@ const techItems = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <section>
       <StyledTitle>Technologies</StyledTitle>
       <StyledTech>
         <Progress tech="React" value="1" />
@@ -26,19 +26,19 @@ export const Skills = () => {
         <StyledH2>Additional technologies and skills</StyledH2>
         <UlTech UlItems={techItems} />
       </StyledAddTech>
-    </StyledSkills>
+    </section>
   );
 };
 
-const StyledSkills = styled.section`
-  background-color: rgba(15, 22, 36, 1);
-`;
+// const StyledSkills = styled.section`
+//   background-color: rgba(15, 22, 36, 1);
+// `;
 
 const StyledTech = styled.div``;
 
 const StyledAddTech = styled.div``;
 
 const StyledTitle = styled.title``;
+
 const StyledH2 = styled.h2`
-  color: white;
 `;

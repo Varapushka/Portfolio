@@ -19,10 +19,10 @@ export const Progress = (props: ProgressPropsType) => {
 };
 
 const StyledLabel = styled.label`
-  color: white;
+
 `;
 
 const StyledSpan = styled.span`
-  color: white;
+
 
 `

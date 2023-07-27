@@ -3,21 +3,25 @@ import styled from 'styled-components';
 import { Logo } from '../../components/logo/Logo';
 import { Nav } from '../../components/nav/Nav';
 import { SocialLinks } from '../../components/socialLinks/SocialLinks';
+import { Container } from '../../components/Container';
+import { FlexWrapper } from '../../components/FlexWrapper';
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Nav />
-      <SocialLinks />
+      <Container>
+        <FlexWrapper justify="space-between" align="center">
+          <Logo />
+          <Nav />
+          <SocialLinks />
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  height: 135px;
+  height: 95px;
   background-color: rgba(15, 22, 36, 1);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  padding: 0 20px;
 `;

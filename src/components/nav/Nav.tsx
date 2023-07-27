@@ -5,17 +5,23 @@ export const Nav = () => {
   return (
     <StyledNav>
       <ul>
-        <li>
-          <NavLink href="">Projects</NavLink>
-        </li>
+        <ListItem>
+          <NavLink href="">
+            Projects
+          </NavLink>
+        </ListItem>
 
-        <li>
-          <NavLink href="">Technologies</NavLink>
-        </li>
+        <ListItem>
+          <NavLink href="">
+            Technologies
+          </NavLink>
+        </ListItem>
 
-        <li>
-          <NavLink href="">About me</NavLink>
-        </li>
+        <ListItem>
+          <NavLink href="">
+            About me
+          </NavLink>
+        </ListItem>
       </ul>
     </StyledNav>
   );
@@ -25,13 +31,21 @@ export const Nav = () => {
 const StyledNav = styled.nav`
   ul {
     display: flex;
-    gap:20px;
- list-style-type: none;
+    gap: 20px;
+    list-style-type: none;
   }
-`
+`;
+const ListItem = styled.li`
+
+`;
 
 const NavLink = styled.a`
   text-decoration: none;
-  color: white;
-  
-`
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 30px;
+  text-align: center;
+  :hover, :focus-visible{
+  color: rgba(19, 173, 199, 1);
+}
+`;
+
