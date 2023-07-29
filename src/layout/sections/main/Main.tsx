@@ -9,7 +9,7 @@ export const Main = () => {
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={'space-between'} align={'center'}>
+        <FlexWrapper justify={'space-between'} align={'center'} wrap='wrap'>
           <MainTextbox>
             <MainTitle>Lorem ipsum dolor sit amet</MainTitle>
 
@@ -30,12 +30,13 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
 `;
 
 const MainTextbox = styled(FlexWrapper)`
   flex-direction: column;
+  justify-content: center;
   align-items: left;
   max-width: 50%;
 `;
@@ -58,6 +59,7 @@ const MainDescription = styled.p`
 const PhotoFrame = styled.div`
   position: relative;
   border-radius: 50px 0px 50px 0px;
+  z-index: 2;
 
   ::before {
     content: '';
@@ -66,18 +68,15 @@ const PhotoFrame = styled.div`
     top: -2px;
     left: -2px;
     right: -2px;
-    bottom: -2px;
-    background-image: linear-gradient(
-      to right,
-      rgba(19, 173, 199, 1),
-      rgba(105, 120, 209, 1),
-      rgba(148, 93, 214, 1)
-    );
-    z-index: -1;
+    bottom: 2px;
+    background: linear-gradient(92deg, #8643dc 0%,  #00C0FD 100%);
+    z-index: 1;
   }
 `;
 
 const Photo = styled.img`
+position: relative;
+z-index:3;
   width: 350px;
   height: 430px;
   border-radius: 50px 0px 50px 0px;

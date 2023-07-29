@@ -13,4 +13,7 @@ export const UlTech = (props: { UlItems: Array<string> }) => {
   );
 };
 
-const StyledLi = styled.li``;
+const StyledLi = styled.li`
+font-size: 36px;
+font-weight: 600;
+`;
