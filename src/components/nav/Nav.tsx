@@ -44,8 +44,11 @@ const NavLink = styled.a`
   font-family: 'Poppins', 'sans-serif';
   font-size: 30px;
   text-align: center;
+  
   :hover, :focus-visible{
-  color: rgba(19, 173, 199, 1);
+  background: linear-gradient(to right, rgba(19, 173, 199, 1),rgba(105, 120, 209, 1),rgba(148, 93, 214, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 `;
 
