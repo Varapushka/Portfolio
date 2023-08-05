@@ -4,34 +4,52 @@ import photo from '../../../assets/img/avatar.webp';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { StyledButton } from '../../../components/Button';
 import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
+import { useWindowSize } from '../../../hooks/useWindowSize';
 
 export const Main = () => {
+  const { width, height } = useWindowSize();
+
   return (
     <StyledMain>
       <Container>
-        <FlexWrapper justify={'space-between'} align={'center'} wrap='wrap'>
+        <MainWrap>
           <MainTextbox>
-            <MainTitle>Lorem ipsum dolor sit amet</MainTitle>
+            <MainHello>Hello, I'm</MainHello>
 
+            <MainTitle>Sergei Voropaev</MainTitle>
             <MainDescription>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </MainDescription>
 
-            <StyledButton>Let's begin</StyledButton>
+            <StyledButton
+              width={width < 768 ? '200px' : '280px'}
+              height={height < 768 ? '60px' : '80px'}
+            >
+              Let's begin
+            </StyledButton>
           </MainTextbox>
           <PhotoFrame>
             <Photo src={photo} alt="avatar" />
           </PhotoFrame>
-        </FlexWrapper>
+        </MainWrap>
       </Container>
     </StyledMain>
   );
 };
 
 const StyledMain = styled.section`
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
+`;
+
+const MainWrap = styled.div`
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100%;
 `;
 
 const MainTextbox = styled(FlexWrapper)`
@@ -39,21 +57,45 @@ const MainTextbox = styled(FlexWrapper)`
   justify-content: center;
   align-items: left;
   max-width: 50%;
+  @media ${theme.media.tablet} {
+    max-width: 80%;
+
+  }
+`;
+const MainHello = styled.h3`
+  font-family: Poppins, sans-serif;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  @media ${theme.media.tablet} {
+    font-size: 0.6em;
+
+  }
 `;
 
 const MainTitle = styled.h2`
   font-family: Poppins, sans-serif;
-  font-size: 50px;
+  font-size: 3em;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  @media ${theme.media.tablet} {
+    font-size: 1.7em;
+
+  }
 `;
 
 const MainDescription = styled.p`
   color: #bcbcbc;
-  font-size: 27px;
+  font-size: 1.6em;
   font-weight: 600;
-  margin: 27px 0 54px 0;
+  margin-top: 27px;
+  margin-bottom: 54px;
+  @media ${theme.media.tablet} {
+    font-size: 1em;
+
+  }
 `;
 
 const PhotoFrame = styled.div`
@@ -69,15 +111,20 @@ const PhotoFrame = styled.div`
     left: -2px;
     right: -2px;
     bottom: 2px;
-    background: linear-gradient(92deg, #8643dc 0%,  #00C0FD 100%);
+    background: linear-gradient(92deg, #8643dc 0%, #00c0fd 100%);
     z-index: 1;
   }
 `;
 
 const Photo = styled.img`
-position: relative;
-z-index:3;
+  position: relative;
+  z-index: 3;
   width: 350px;
   height: 430px;
   border-radius: 50px 0px 50px 0px;
+
+  @media ${theme.media.tablet} {
+    width: 280px;
+    height: 350px;
+  }
 `;

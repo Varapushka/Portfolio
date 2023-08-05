@@ -1,6 +1,7 @@
 import React from "react";
 import sprite from "../../assets/img/sprite.svg"
 import styled from "styled-components";
+import { theme } from "../../styles/Theme";
 
 type IconPropsType = {
   iconId: string
@@ -19,6 +20,8 @@ export const Icon = (props: IconPropsType) => {
 
 
 const StyledSvg = styled.svg`
+
+  
   :hover {
     stroke:  rgba(19, 173, 199, 1);
   }

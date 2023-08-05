@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../FlexWrapper';
+import { theme } from '../../styles/Theme';
 type ProgressPropsType = {
   tech: string;
   value: string;
@@ -21,16 +22,23 @@ export const Progress = (props: ProgressPropsType) => {
 
 const StyledLabel = styled.label`
 margin-top: 55px;
-font-size: 36px;
+font-size: 2.2em;
 font-weight: 600;
+@media ${theme.media.tablet} {
+    font-size: 1.1em;
+
+  }
 
 `;
 
 const StyledSpan = styled.span`
-font-size: 24px;
+font-size: 1.5em;
 font-weight: 600;
 margin-top: 55px;
+@media ${theme.media.tablet} {
+    font-size: 0.7em;
 
+  }
 
 `
 

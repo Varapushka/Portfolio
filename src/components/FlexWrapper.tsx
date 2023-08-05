@@ -5,8 +5,9 @@ type FlexWrapperPropsType = {
   justify?: string;
   align?: string;
   wrap?: string;
-  heigh?: string;
+  height?: string;
   width?: string;
+  minHeight?: string;
 };
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
@@ -14,6 +15,7 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   justify-content: ${(props) => props.justify || 'flex-start'};
   align-items: ${(props) => props.align || 'stretch'};
   flex-wrap: ${(props) => props.wrap || 'no-wrap'};
-  height: ${(props) => props.heigh || '100%'};
+  height: ${(props) => props.height || '100%'};
   width: ${(props) => props.width || '100%'};
+  min-height: ${(props) => props.minHeight || '100%'};
 `;

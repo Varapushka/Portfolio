@@ -4,6 +4,7 @@ import projPhoto from '../../../assets/img/image-1.webp';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import styled from 'styled-components';
 import { Container } from '../../../components/Container';
+import { theme } from '../../../styles/Theme';
 
 export const Projects = () => {
   return (
@@ -50,6 +51,10 @@ const CardBox = styled(FlexWrapper)`
 
 const StyledH2 = styled.h2`
 font-weight: 600;
-font-size: 64px;
+font-size: 4em;
 margin: 45px 0 95px;
+@media ${theme.media.tablet} {
+    font-size: 2em;
+
+  }
 `;

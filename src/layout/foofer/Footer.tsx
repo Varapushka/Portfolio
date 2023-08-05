@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { SocialLinks } from '../../components/socialLinks/SocialLinks';
+import { theme } from '../../styles/Theme';
 
 export const Footer = () => {
   return (
@@ -25,6 +26,9 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media ${theme.media.tablet} {
+    flex-direction:column;
+  }
 `;
 
 const FooterText = styled.p`

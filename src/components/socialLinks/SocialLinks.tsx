@@ -1,10 +1,11 @@
 import React from 'react';
 import { Icon } from '../icon/Icon';
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 export const SocialLinks = () => {
   return (
-    <StyledSocialBox>
+    <StyledSocialBox className='socialLinks'>
       <a href="#">
         <Icon iconId={'githubSvg'} width="32px" height="32px" viewBox='0 0 32 32'/>
       </a>
@@ -23,7 +24,5 @@ const StyledSocialBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  a {
-    gap: 30px;
-  }
+
 `;

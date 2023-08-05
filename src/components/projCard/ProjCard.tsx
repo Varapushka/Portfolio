@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FlexWrapper } from '../FlexWrapper';
 import { StyledButton } from '../Button';
+import { theme } from '../../styles/Theme';
 
 
 
@@ -43,13 +44,20 @@ const ProjImg = styled.img`
   height: 266px;
   margin-bottom: 25px;
   border-radius: 50px 8px 8px 8px;
+  @media ${theme.media.tablet} {
+    height: 190px;
+  }
 `;
 
 const Title = styled.h3`
 position: relative;
-font-size: 36px;
+font-size: 2em;
 font-weight: 600;
 margin: 0 auto;
+@media ${theme.media.tablet} {
+    font-size: 1.5em;
+
+  }
 
 ::after {
   content: '';
@@ -65,7 +73,11 @@ margin: 0 auto;
 
 const Text = styled.p`
 font-weight: 600;
-font-size: 28px;
+font-size: 1.6em;
 margin: 54px 0 25px;
+@media ${theme.media.tablet} {
+    font-size: 1.1em;
+
+  }
 `;
 

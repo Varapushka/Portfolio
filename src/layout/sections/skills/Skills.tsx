@@ -4,11 +4,12 @@ import { Progress } from '../../../components/progress/Progress';
 import { UlTech } from '../../../components/UiOfTech/UlOfTech';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
+import { theme } from '../../../styles/Theme';
 
 const techItems = [
-  'Git',
+   'Engagement', 
+   'Git',
   'Quick learning',
-  'Engagement',
   'B2 english',
   'Teamwork',
   'RWD'
@@ -57,12 +58,10 @@ ul {
   justify-content: space-between;
   
   li {
-    width:25%
-  }
-  li + li {
-    gap: 300px;
+    width: 33%;
 
   }
+
 }
 
 `;
@@ -70,16 +69,23 @@ ul {
 
 const StyledH2 = styled.h2`
 
-font-size: 64px;
+font-size: 4em;
 font-weight: 600;
+@media ${theme.media.tablet} {
+    font-size: 2em;
 
+  }
 
 `
 const StyledTitleAddSkills = styled.h2`
 margin-top: 130px;
 margin-bottom: 80px;
-font-size: 48px;
+font-size: 3em;
 font-weight: 600;
 
+@media ${theme.media.tablet} {
+    font-size: 1.7em;
+
+  }
 
 `

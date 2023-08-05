@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { theme } from '../../styles/Theme';
 
 export const Nav = () => {
   return (
@@ -34,6 +35,10 @@ const StyledNav = styled.nav`
     gap: 20px;
     list-style-type: none;
   }
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
 `;
 const ListItem = styled.li`
 
@@ -44,7 +49,7 @@ const NavLink = styled.a`
   font-family: 'Poppins', 'sans-serif';
   font-size: 30px;
   text-align: center;
-  
+
   :hover, :focus-visible{
   background: linear-gradient(to right, rgba(19, 173, 199, 1),rgba(105, 120, 209, 1),rgba(148, 93, 214, 1));
   -webkit-background-clip: text;
