@@ -1,37 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
-
 import { SocialLinks } from '../../components/socialLinks/SocialLinks';
-import { theme } from '../../styles/Theme';
+import {S} from './Footer_Styles'
 
 export const Footer = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <div>
-        <FooterText>Call me:</FooterText>
-        <FooterText> +375-29-567-89-12</FooterText>
+        <S.FooterText>Call me:</S.FooterText>
+        <S.FooterText> +375-29-567-89-12</S.FooterText>
       </div>
       <div>
-      <FooterText>Email:</FooterText>
-      <FooterText> nifelim96@gmail.com</FooterText>
+        <S.FooterText>Email:</S.FooterText>
+        <S.FooterText> nifelim96@gmail.com</S.FooterText>
       </div>
       <SocialLinks />
-    </StyledFooter>
+    </S.Footer>
   );
 };
 
-const StyledFooter = styled.footer`
-  height: 200px;
-  background-color: rgba(15, 22, 36, 1);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media ${theme.media.tablet} {
-    flex-direction:column;
-  }
-`;
-
-const FooterText = styled.p`
-  font-size: 24px;
-  font-weight: 600;
-`;
