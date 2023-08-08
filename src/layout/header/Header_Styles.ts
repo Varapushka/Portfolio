@@ -1,32 +1,17 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { theme } from '../../styles/Theme';
+import styled, { css } from "styled-components";
+import { theme } from "../../styles/Theme";
 
-export const BugerMenu = () => {
-  return (
-    <StyledBurgerMenu>
-      <BurgerButton isOpen={false}>
-        <span></span>
-      </BurgerButton>
 
-      <BurgerPopup isOpen={false}>
-        <ul>
-          <ListItem>
-            <NavLink href="">Projects</NavLink>
-          </ListItem>
-
-          <ListItem>
-            <NavLink href="">Technologies</NavLink>
-          </ListItem>
-
-          <ListItem>
-            <NavLink href="">About me</NavLink>
-          </ListItem>
-        </ul>
-      </BurgerPopup>
-    </StyledBurgerMenu>
-  );
-};
+const Header = styled.header`
+  height: 95px;
+  background-color: rgba(15, 22, 36, 1);
+  padding: 0 20px;
+  .socialLinks {
+    @media ${theme.media.tablet} {
+      display: none;
+    }
+  }
+`;
 
 const BurgerPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
@@ -38,11 +23,12 @@ const BurgerPopup = styled.div<{ isOpen: boolean }>`
   z-index: 25;
   display: none;
 
-  ${(props) => props.isOpen && css<{ isOpen: boolean }>`
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
       display: flex;
       justify-content: center;
       align-items: center;
-
     `}
 
   ul {
@@ -55,14 +41,8 @@ const BurgerPopup = styled.div<{ isOpen: boolean }>`
   }
 `;
 
-const StyledBurgerMenu = styled.nav`
-  display: none;
-
-  @media ${theme.media.tablet} {
-    display: block;
-  }
-`;
-const ListItem = styled.li``;
+const BurgerMenu = styled.nav``;
+const MenuItem = styled.li``;
 
 const NavLink = styled.a`
   text-decoration: none;
@@ -99,10 +79,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     bottom: 50px;
     left: 45%;
 
-    ${(props) => props.isOpen && css<{ isOpen: boolean }>` 
-    background-color: rgba(255, 255, 255, 0);
-
-    `}
+    ${(props) =>
+      props.isOpen &&
+      css<{ isOpen: boolean }>`
+        background-color: rgba(255, 255, 255, 0);
+      `}
 
     &::before {
       content: '';
@@ -114,11 +95,11 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       position: absolute;
       transform: translateY(-10px);
 
-      ${(props) => props.isOpen && css<{ isOpen: boolean }>` 
-      transform:  rotate(-45deg) translateY(0);    
-    `}
-
-
+      ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          transform: rotate(-45deg) translateY(0);
+        `}
     }
     &::after {
       content: '';
@@ -130,13 +111,37 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       position: absolute;
       transform: translateY(10px);
 
-      ${(props) => props.isOpen && css<{ isOpen: boolean }>` 
-      transform:  rotate(45deg) translateY(0);    
-      width: 36px;
-    
-    `}
-
-
+      ${(props) =>
+        props.isOpen &&
+        css<{ isOpen: boolean }>`
+          transform: rotate(45deg) translateY(0);
+          width: 36px;
+        `}
     }
+    
   }
+
 `;
+
+const Nav = styled.nav`
+  ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+  }
+
+
+`;
+
+
+
+export const S = {
+  Header,
+  BurgerPopup,
+  BurgerMenu,
+  MenuItem,
+  NavLink,
+  BurgerButton,
+  Nav,
+
+}
