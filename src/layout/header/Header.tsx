@@ -10,7 +10,7 @@ import { S } from './Header_Styles';
 
 export const Header: React.FC = () => {
   const { width, height } = useWindowSize();
-
+  console.log(width);
   return (
     <S.Header>
       <Container>
@@ -25,4 +25,3 @@ export const Header: React.FC = () => {
     </S.Header>
   );
 };
-
