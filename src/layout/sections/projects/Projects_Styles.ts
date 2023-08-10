@@ -13,7 +13,7 @@ const CardBox = styled(FlexWrapper)`
 const H2 = styled.h2`
 font-weight: 600;
 font-size: 4em;
-margin: 45px 0 95px;
+margin: 100px 0 70px;
 @media ${theme.media.tablet} {
     font-size: 2em;
 
@@ -26,21 +26,26 @@ const Card = styled(FlexWrapper)`
   border: 1px solid rgba(163, 157, 157, 1);
   border-radius: 50px 0px 50px 0px;
   margin-bottom: 100px;
-  padding: 25px 25px 45px;
+  padding: 13px 25px 45px;
 `;
 
 const ProjImg = styled.img`
   height: 266px;
   margin-bottom: 25px;
-  border-radius: 50px 8px 8px 8px;
+  border-radius: 40px 0px 8px 8px;
+  object-fit: cover;
+  transition: 2s;
   @media ${theme.media.tablet} {
     height: 190px;
+  }
+  :hover {
+    transform: scale(1.14);
   }
 `;
 
 const Title = styled.h3`
 position: relative;
-font-size: 2em;
+font-size: 1.9em;
 font-weight: 600;
 margin: 0 auto;
 @media ${theme.media.tablet} {
@@ -62,12 +67,8 @@ margin: 0 auto;
 
 const Text = styled.p`
 font-weight: 600;
-font-size: 1.6em;
 margin: 54px 0 25px;
-@media ${theme.media.tablet} {
-    font-size: 1.1em;
 
-  }
 `;
 
 export const S = {

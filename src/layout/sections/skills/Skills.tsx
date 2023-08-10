@@ -1,47 +1,45 @@
 import React from 'react';
-import { Progress } from '../../../components/progress/Progress';
-import { UlTech } from '../../../components/UiOfTech/UlOfTech';
 import { Container } from '../../../components/Container';
 import { FlexWrapper } from '../../../components/FlexWrapper';
-import {S} from './Skills_Styles'
-
-const techItems = [
-   'Engagement', 
-   'Git',
-  'Quick learning',
-  'B2 english',
-  'Teamwork',
-  'RWD'
-];
+import { S } from './Skills_Styles';
+import { Icon } from '../../../components/icon/Icon';
+import GitIcon from '../../../assets/img/skill-icons-git.png';
+import FigmaIcon from '../../../assets/img/skill-icons-figma-light.png';
 
 const progData = [
   {
-    tech: "React",
-    value: "2",
-    level: "Regular"
+    tech: 'JAVASCRIPT',
+    svgId: 'JS-iconSvg',
   },
   {
-    tech: "Html",
-    value: "3",
-    level: "Advansed"
+    tech: 'TYPESCRIPT',
+    svgId: 'TS-iconSvg',
   },
   {
-    tech: "JavaScript, TypeScript, JQuery",
-    value: "2",
-    level: "Regular"
+    tech: 'MONGO DB',
+    svgId: 'Mongo-iconSvg',
   },
   {
-    tech: "UI design in Figma",
-    value: "1",
-    level: "Beginner"
+    tech: 'REACT JS',
+    svgId: 'React-JS-iconSvg',
   },
   {
-    tech: "React Native",
-    value: "1",
-    level: "Beginner"
+    tech: 'REACT NATIVE',
+    svgId: 'React-Native-iconSvg',
   },
-
-]
+  {
+    tech: 'STYLED COMPONENTS',
+    svgId: 'Styled-components-iconSvg',
+  },
+  {
+    tech: 'REDUX',
+    svgId: 'Redux-iconSvg',
+  },
+  {
+    tech: 'DOCKER',
+    svgId: 'Docker-iconSvg',
+  },
+];
 
 export const Skills = () => {
   return (
@@ -49,18 +47,37 @@ export const Skills = () => {
       <Container>
         <S.H2>Technologies</S.H2>
         <FlexWrapper direction="column" align="center">
-          <S.Tech>
-            {progData.map((p)=> {
-              return <Progress tech={p.tech} value={p.value} level={p.level}/>
+          <FlexWrapper justify='space-between' wrap='wrap'>
+            {progData.map((p) => {
+              return (
+                <S.IconBox>
+                  <Icon
+                    iconId={p.svgId}
+                    width="120px"
+                    height="120px"
+                    viewBox="0 0 120px 120px"
+                  />
+                  <S.P>{p.tech}</S.P>
+                </S.IconBox>
+              );
             })}
-          </S.Tech>
-          <S.TitleAddSkills>Additional technologies and skills</S.TitleAddSkills>
-          <S.AddTech>
-            <UlTech UlItems={techItems} />
-          </S.AddTech>
+          </FlexWrapper>
+
+          <S.TitleAddSkills>
+            Additional technologies and skills
+          </S.TitleAddSkills>
+          <FlexWrapper justify="space-between" align="center" width="40%">
+            <img src={GitIcon} alt="icon Git" />
+            <img src={FigmaIcon} alt="icon Figma" />
+            <Icon
+              iconId={'SkillsGitHubSvg'}
+              width="100px"
+              height="100px"
+              viewBox="0 0 100px 100px"
+            />
+          </FlexWrapper>
         </FlexWrapper>
       </Container>
     </S.Skills>
   );
 };
-

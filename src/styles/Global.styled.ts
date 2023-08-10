@@ -22,17 +22,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.font};
   line-height: 1.2;
+  font-size: 18px;
 }
 
 a{
   text-decoration: none;
   color: ${theme.colors.font};
-
+  :hover {
+    cursor: pointer;
+  }
 }
 
 button {
   background-color: unset;
   border: none;
+  :hover {
+    cursor: pointer;
+  }
 }
 
 section:nth-of-type(odd) {

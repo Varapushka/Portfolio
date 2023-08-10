@@ -8,6 +8,7 @@ type FlexWrapperPropsType = {
   height?: string;
   width?: string;
   minHeight?: string;
+  gap?: string;
 };
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   display: flex;
@@ -18,4 +19,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   height: ${(props) => props.height || '100%'};
   width: ${(props) => props.width || '100%'};
   min-height: ${(props) => props.minHeight || '100%'};
+   gap: ${(props) => props.gap || '0px'};
 `;

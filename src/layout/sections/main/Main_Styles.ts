@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { theme } from "../../../styles/Theme";
+import styled from 'styled-components';
+import { FlexWrapper } from '../../../components/FlexWrapper';
+import { theme } from '../../../styles/Theme';
 
 const Main = styled.section`
   min-height: 100vh;
@@ -22,19 +22,14 @@ const MainTextbox = styled(FlexWrapper)`
   max-width: 50%;
   @media ${theme.media.tablet} {
     max-width: 80%;
-
   }
 `;
 const MainHello = styled.h3`
   font-family: Poppins, sans-serif;
-  font-size: 1em;
+  font-size: 0.8em;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  @media ${theme.media.tablet} {
-    font-size: 0.6em;
-
-  }
 `;
 
 const MainTitle = styled.h2`
@@ -44,21 +39,15 @@ const MainTitle = styled.h2`
   font-weight: 600;
   line-height: normal;
   @media ${theme.media.tablet} {
-    font-size: 1.7em;
-
+    font-size: 2em;
   }
 `;
 
 const MainDescription = styled.p`
   color: #bcbcbc;
-  font-size: 1.6em;
   font-weight: 600;
-  margin-top: 27px;
-  margin-bottom: 54px;
-  @media ${theme.media.tablet} {
-    font-size: 1em;
-
-  }
+  margin-top: 1.6em;
+  margin-bottom: 3em;
 `;
 
 const PhotoFrame = styled.div`
@@ -85,13 +74,13 @@ const Photo = styled.img`
   width: 350px;
   height: 430px;
   border-radius: 50px 0px 50px 0px;
+  object-fit: cover;
 
   @media ${theme.media.tablet} {
     width: 280px;
     height: 350px;
   }
 `;
-
 
 export const S = {
   Main,
@@ -102,4 +91,4 @@ export const S = {
   MainDescription,
   PhotoFrame,
   Photo,
-}
+};

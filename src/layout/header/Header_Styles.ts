@@ -47,7 +47,6 @@ const MenuItem = styled.li``;
 const NavLink = styled.a`
   text-decoration: none;
   font-family: 'Poppins', 'sans-serif';
-  font-size: 30px;
   text-align: center;
 
   :hover,

@@ -1,10 +1,8 @@
 import React from 'react';
 import { ProjCard } from '../../../components/projCard/ProjCard';
 import projPhoto from '../../../assets/img/image-1.webp';
-import { FlexWrapper } from '../../../components/FlexWrapper';
-import styled from 'styled-components';
+
 import { Container } from '../../../components/Container';
-import { theme } from '../../../styles/Theme';
 import { S } from './Projects_Styles';
 
 const projData = [
