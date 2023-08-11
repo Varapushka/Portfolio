@@ -7,6 +7,7 @@ import { BugerMenu } from './menu/burger/BurgerMenu';
 import { useWindowSize } from '../../hooks/useWindowSize';
 import { Nav } from './menu/nav/Nav';
 import { S } from './Header_Styles';
+import { animateScroll } from 'react-scroll';
 
 export const Header: React.FC = () => {
   const { width, height } = useWindowSize();
@@ -15,7 +16,7 @@ export const Header: React.FC = () => {
     <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <a href="#home">
+          <a onClick={()=>{animateScroll.scrollToTop()}}>
    
             <Logo />
           </a>

@@ -3,8 +3,13 @@ import { theme } from '../../styles/Theme';
 import { Link } from 'react-scroll';
 
 const Header = styled.header`
+position:fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 999;
   height: 95px;
-  background-color: rgba(15, 22, 36, 1);
+  background-color: rgba(15, 22, 36, 0.5);
   padding: 0 20px;
   .socialLinks {
     @media ${theme.media.tablet} {
