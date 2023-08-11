@@ -1,24 +1,26 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import Tilt from 'react-parallax-tilt';
 import photo from '../../../assets/img/avatar.webp';
 import { StyledButton } from '../../../components/Button';
 import { Container } from '../../../components/Container';
 import { useWindowSize } from '../../../hooks/useWindowSize';
 import { S } from './Main_Styles';
 
-export const Main = () => {
+export const Main: React.FC = () => {
   const { width, height } = useWindowSize();
 
   return (
-    <S.Main>
+    <S.Main id = {'home'}>
       <Container>
         <S.MainWrap>
           <S.MainTextbox>
             <S.MainHello>Hello, I'm</S.MainHello>
 
             <S.MainTitle>Sergei Voropaev</S.MainTitle>
+            <S.H1>A Web Developer, A Frontend Developer</S.H1>
             <S.MainDescription>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              A Web Developer, A Frontend Developer
             </S.MainDescription>
 
             <StyledButton
@@ -28,12 +30,13 @@ export const Main = () => {
               Let's begin
             </StyledButton>
           </S.MainTextbox>
-          <S.PhotoFrame>
-            <S.Photo src={photo} alt="avatar" />
-          </S.PhotoFrame>
+          <Tilt>
+            <S.PhotoFrame>
+              <S.Photo src={photo} alt="avatar" />
+            </S.PhotoFrame>
+          </Tilt>
         </S.MainWrap>
       </Container>
     </S.Main>
   );
 };
-

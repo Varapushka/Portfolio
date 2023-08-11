@@ -43,7 +43,7 @@ const progData = [
 
 export const Skills: React.FC = () => {
   return (
-    <S.Skills>
+    <S.Skills id = {'technologies'}>
       <Container>
         <S.H2>Technologies</S.H2>
         <FlexWrapper direction="column" align="center">

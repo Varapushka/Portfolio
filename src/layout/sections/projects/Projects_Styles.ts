@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { theme } from "../../../styles/Theme";
 
+
+const Projects = styled.section`
+position: relative;
+`
 const CardBox = styled(FlexWrapper)`
   flex-wrap: wrap;
   max-width: 1320px;
@@ -72,6 +76,7 @@ margin: 54px 0 25px;
 `;
 
 export const S = {
+  Projects,
   CardBox,
   H2,
   Card,

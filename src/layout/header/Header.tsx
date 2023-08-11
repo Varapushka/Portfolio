@@ -15,7 +15,10 @@ export const Header: React.FC = () => {
     <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <Logo />
+          <a href="#home">
+   
+            <Logo />
+          </a>
 
           {width > 768 ? <Nav /> : <BugerMenu />}
 

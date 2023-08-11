@@ -36,9 +36,9 @@ const projData = [
 
 
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
   return (
-    <section>
+    <S.Projects id= {'projects'}>
       <Container>
         <S.H2>Projects</S.H2>
         <S.CardBox>
@@ -54,7 +54,7 @@ export const Projects = () => {
 
         </S.CardBox>
       </Container>
-    </section>
+    </S.Projects>
   );
 };
 

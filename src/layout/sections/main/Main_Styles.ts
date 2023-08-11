@@ -38,6 +38,7 @@ const MainTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  margin-bottom: 25px;
   @media ${theme.media.tablet} {
     font-size: 2em;
   }
@@ -81,7 +82,9 @@ const Photo = styled.img`
     height: 350px;
   }
 `;
-
+const H1 = styled.h1`
+display: none;
+`
 export const S = {
   Main,
   MainWrap,
@@ -91,4 +94,5 @@ export const S = {
   MainDescription,
   PhotoFrame,
   Photo,
+  H1,
 };

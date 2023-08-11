@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import styled, { css } from 'styled-components';
-
 import { MenuItems } from '../MenuItems';
 import { S } from '../../Header_Styles';
 
-export const BugerMenu = () => {
+export const BugerMenu: React.FC = () => {
   const [menuIsOpen, setmenuIsOpen] = useState(false);
   const onBuregerBtnClick = () => {
     setmenuIsOpen(!menuIsOpen);

@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
-import { theme } from "../../styles/Theme";
-
+import styled, { css } from 'styled-components';
+import { theme } from '../../styles/Theme';
+import { Link } from 'react-scroll';
 
 const Header = styled.header`
   height: 95px;
@@ -44,13 +44,14 @@ const BurgerPopup = styled.div<{ isOpen: boolean }>`
 const BurgerMenu = styled.nav``;
 const MenuItem = styled.li``;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   text-decoration: none;
   font-family: 'Poppins', 'sans-serif';
   text-align: center;
 
   :hover,
-  :focus-visible {
+  :focus-visible,
+  :active {
     background: linear-gradient(
       to right,
       rgba(19, 173, 199, 1),
@@ -64,19 +65,26 @@ const NavLink = styled.a`
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: fixed;
-  height: 100px;
-  width: 100px;
-  top: -15px;
-  right: 0%;
+  height: 50px;
+  width: 50px;
+  top: 15px;
+  right: 15px;
   z-index: 50;
+  background: linear-gradient(
+    to right,
+    rgba(19, 173, 199, 1),
+    rgba(105, 120, 209, 1),
+    rgba(148, 93, 214, 1)
+  );
+  border-radius: 30%;
   span {
     display: blok;
     height: 2px;
-    width: 36px;
+    width: 25px;
     background-color: white;
     position: absolute;
-    bottom: 50px;
-    left: 45%;
+    bottom: 45%;
+    left: 25%;
 
     ${(props) =>
       props.isOpen &&
@@ -88,7 +96,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       content: '';
       display: blok;
       height: 2px;
-      width: 36px;
+      width: 25px;
       left: 0;
       background-color: white;
       position: absolute;
@@ -104,7 +112,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       content: '';
       display: blok;
       height: 2px;
-      width: 28px;
+      width: 25px;
       right: 0;
       background-color: white;
       position: absolute;
@@ -114,12 +122,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         props.isOpen &&
         css<{ isOpen: boolean }>`
           transform: rotate(45deg) translateY(0);
-          width: 36px;
         `}
     }
-    
   }
-
 `;
 
 const Nav = styled.nav`
@@ -128,11 +133,7 @@ const Nav = styled.nav`
     gap: 20px;
     list-style-type: none;
   }
-
-
 `;
-
-
 
 export const S = {
   Header,
@@ -142,5 +143,4 @@ export const S = {
   NavLink,
   BurgerButton,
   Nav,
-
-}
+};
