@@ -1,8 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import { FlexWrapper } from '../FlexWrapper';
 import { StyledButton } from '../Button';
-import { theme } from '../../styles/Theme';
 import { S } from '../../layout/sections/projects/Projects_Styles'
 
 

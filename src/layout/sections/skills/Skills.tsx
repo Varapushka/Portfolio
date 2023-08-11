@@ -41,7 +41,7 @@ const progData = [
   },
 ];
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
     <S.Skills>
       <Container>
@@ -66,7 +66,7 @@ export const Skills = () => {
           <S.TitleAddSkills>
             Additional technologies and skills
           </S.TitleAddSkills>
-          <FlexWrapper justify="space-between" align="center" width="40%">
+          <FlexWrapper justify="space-evenly" align="center" width="70%" wrap='wrap' gap='50px'>
             <img src={GitIcon} alt="icon Git" />
             <img src={FigmaIcon} alt="icon Figma" />
             <Icon

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../../styles/Theme';
 
 const Skills = styled.section`
-  min-height: 70vh;
+
   display: flex;
   flex-direction: column;
   padding-bottom: 170px;

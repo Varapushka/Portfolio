@@ -13,7 +13,6 @@ const Footer = styled.footer`
 `;
 
 const FooterText = styled.p`
-  font-size: 24px;
   font-weight: 600;
 `;
 
