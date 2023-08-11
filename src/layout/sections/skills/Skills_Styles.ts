@@ -6,7 +6,9 @@ const Skills = styled.section`
   display: flex;
   flex-direction: column;
   padding-bottom: 170px;
-
+  img {
+    z-index:1;
+  }
   svg:hover {
     stroke: none;
   }
@@ -46,6 +48,7 @@ const IconBox = styled.div`
   &:last-child {
     margin-right: 0px;
   }
+ 
 
 `;
 

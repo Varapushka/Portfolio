@@ -20,7 +20,7 @@ export const Icon = (props: IconPropsType) => {
 
 
 const StyledSvg = styled.svg`
-
+z-index: 1;
   
   :hover {
     stroke:  rgba(19, 173, 199, 1);
