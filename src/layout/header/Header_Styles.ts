@@ -11,9 +11,16 @@ z-index: 999;
   height: 95px;
   background-color: rgba(15, 22, 36, 0.5);
   padding: 0 20px;
+  @media ${theme.media.tablet} {
+    background-color: rgba(15, 22, 36, 0.3);
+    height: 70px;
+
+      
+    }
   .socialLinks {
     @media ${theme.media.tablet} {
       display: none;
+      
     }
   }
 `;
